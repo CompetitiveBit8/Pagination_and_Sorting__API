@@ -45,7 +45,7 @@ async def read_root():
 
 
 @app.get("/readdDB")
-async def read_db(db: Session = Depends(get_db), limit: int = Query(3, ge=3), offset: int = Query(3, ge=3),
+async def read_db(db: Session = Depends(get_db), limit: int = Query(3, ge=3),
                   sort_by: str = Query("id"), page: int = Query(1, ge=1),
                   order: str = Query("asc")):
     
