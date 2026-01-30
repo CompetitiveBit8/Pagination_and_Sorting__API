@@ -1,4 +1,4 @@
-This is a small project. It looks simple but took me a while as I had to go throug abd breakdown the concepts of pagination, sorting, filtering, order, skip, limit and every other word you find in this code.
+This is a small project. It looks simple but took me a while as I had to go through and breakdown the concepts of pagination, sorting, filtering, order, skip, limit and every other word you find in this code.
 
 I started first with the understanding limit as to me, it is the easiest to grasp of all the terms I came accross. you can return your data, limit it and it will produce something, that's progress.
 
