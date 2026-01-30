@@ -1,8 +1,5 @@
 from fastapi import FastAPI, Request, Depends, Query
 from fastapi.responses import HTMLResponse
-# from fastapi.templating import Jinja2Templates
-# from fastapi.staticfiles import StaticFiles
-# from pathlib import Path
 from sqlalchemy.orm import Session, declarative_base, sessionmaker
 from sqlalchemy import create_engine, Column, Integer, String
 
@@ -30,12 +27,7 @@ class posts(Base):
     content = Column(String, index=True)
     author = Column(String, index=True)
 
-
-
-# Base_dir = Path(__file__).resolve().parent
-# templates = Jinja2Templates(directory=Base_dir / "templates")
-
-
+#FstAPI App
 app = FastAPI(title="Pagination and Sorting__API")
 
 
@@ -62,4 +54,5 @@ async def read_db(db: Session = Depends(get_db), limit: int = Query(3, ge=3),
     # pagination
     results = query.offset(skip).limit(limit).all()
     return results
+
 
